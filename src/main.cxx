@@ -43,6 +43,11 @@ void move() {
       s[0].x += 1;
       break;
   }
+
+  if (s[0].x > SIZE) s[0].x = 0;
+  else if (s[0].x < 0) s[0].x = SIZE;
+  else if (s[0].y > SIZE) s[0].y = 0;
+  else if (s[0].y < 0) s[0].y = SIZE;
 }
 
 int main(int argc, char *argv[]) {
