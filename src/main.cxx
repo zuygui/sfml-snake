@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
-
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 #include <stdio.h>
+#include <stdlib.h>
 
 #define SIZE 25
 #define SCREEN_WIDTH SIZE * SIZE
@@ -42,6 +44,13 @@ void move() {
     case SnakeDirection::RIGHT:
       s[0].x += 1;
       break;
+  }
+
+  if ((s[0].x == apple.x) && (s[0].y == apple.y)) {
+    snakeSize++;
+    snakeSpeed++;
+    apple.x = rand() % SIZE;
+    apple.y = rand() % SIZE;
   }
 
   if (s[0].x > SIZE) s[0].x = 0;
