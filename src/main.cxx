@@ -53,6 +53,19 @@ void move() {
     apple.y = rand() % SIZE;
   }
 
+  for (int i = 1; i < snakeSize; i++) {
+    if (s[0].x == s[i].x && s[0].y == s[i].y) {
+      snakeSize = 1;
+      snakeSpeed = 1;
+      s[0].x = 0;
+      s[0].y = 0;
+      direction = SnakeDirection::RIGHT;
+
+      printf("Game Over\n");
+      exit(1);
+    }
+  }
+
   if (s[0].x > SIZE) s[0].x = 0;
   else if (s[0].x < 0) s[0].x = SIZE;
   else if (s[0].y > SIZE) s[0].y = 0;
