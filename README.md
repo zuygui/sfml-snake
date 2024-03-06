@@ -2,7 +2,9 @@
 
 [![GitHub License](https://img.shields.io/github/license/zuygui/sfml-snake)](LICENSE)
 
-A classic Snake game implemented using SFML library.
+A classic Snake game implemented using SFML library. This project was coded on twitch. Here is a replay:
+
+[![Youtube Preview](docs/imgs/youtube.png)](https://www.youtube.com/watch?v=jyDlxqVOZMAs)
 
 ## 🎮 Gameplay
 
